@@ -1,7 +1,7 @@
 ﻿/*
 Photoshop to QML Exporter
 
-Version: 0.4
+Version: 0.5
 
 For information about Qt Quick itself:
 http://qt-project.org/doc/qt-5.0/qtquick/qtquick-index.html
@@ -172,7 +172,7 @@ function main() {
         qmlfile = new File(outputName);
         qmlfile.encoding = "UTF8";
         qmlfile.open("w", "TEXT", "");
-        qmlfile.write("import Qt 4.7\n");
+        qmlfile.write("import QtQuick 2.3\n");
         qmlfile.write("Item {\n");
         qmlfile.write("    width:" + app.activeDocument.width.as("px") + "\n");
         qmlfile.write("    height:" + app.activeDocument.height.as("px") + "\n");
